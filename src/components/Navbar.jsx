@@ -3,7 +3,7 @@ import Logo from "../assets/Logo.png"
 
 const Navbar = () => {
   return (
-    <nav className='bg-gray-950 p-4  flex justify-between items-center'>
+    <nav className='bg-gray-950 p-4  flex justify-between items-center fixed w-full top-0 z-50'>
       <div className='flex items-center ml-10'>
         {/* Logo */}
         <img src={Logo} alt="Logo" className='w-16 h-16 ml-10'/>
@@ -16,9 +16,9 @@ const Navbar = () => {
 
       {/* Linkpage */}
       <ul className='flex space-x-4 mr-20'>
-        <li><a href="" className='text-white hover:text-red-600 text-xl'>HOME</a></li>
-        <li><a href="" className='text-white hover:text-red-600 text-xl'>PRODUCT</a></li>
-        <li><a href="" className='text-white hover:text-red-600 text-xl'>CONTACT</a></li>
+        <li><a href="" className='text-white text-xl hover:text-red-600'>HOME</a></li>
+        <li><a href="" className='text-white text-xl hover:text-red-600'>PRODUCT</a></li>
+        <li><a href="" className='text-white text-xl hover:text-red-600'>CONTACT</a></li>
       </ul>
     </nav>
   )

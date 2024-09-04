@@ -1,0 +1,13 @@
+.full-screen{
+height: 100vh;
+}
+.hero{
+    background-image: url(/src/assets/Bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
