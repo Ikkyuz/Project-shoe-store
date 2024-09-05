@@ -6,7 +6,7 @@ import './style.css'
 const Home = () => {
   return (
     <Layout>
-      <section className='hero full-screen it mt-16'>
+      <section className='hero full-screen mt-16'>
         {/* Overlay */}
         <div className='absolute inset-0 bg-black opacity-60'></div>
 
