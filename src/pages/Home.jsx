@@ -6,12 +6,12 @@ import './style.css'
 const Home = () => {
   return (
     <Layout>
-      <section className='hero full-screen it mt-16'>
+      <section className='hero full-screen mt-16'>
         {/* Overlay */}
         <div className='absolute inset-0 bg-black opacity-60'></div>
 
         {/* Content */}
-        <section className='max-w-screen-xl flex flex-wrap items-center justify-center mx-auto pt-20 relative z-10 min-h-screen'>
+        <section className='max-w-screen-xl flex flex-wrap items-center justify-center mx-auto relative z-10 min-h-screen'>
           <div className='flex gap-10 px-10'>
             <div>
               <img src={Frist} alt="" className='w-[1600px] h-auto' />
