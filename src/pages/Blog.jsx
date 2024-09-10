@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const Contact = () => {
+const Blog = () => {
   return (
     <Layout>
         
@@ -9,4 +9,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Blog

@@ -70,32 +70,35 @@ const Product = () => {
   ];
   const ProductCard = ({ product }) => {
     return (
-      <div className="border rounded-lg shadow-lg overflow-hidden">
-      <NavLink to={`/Product/${product.id}`} activeClassName="active">
-        <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
-      </NavLink>
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">{product.name}</h3>
-        <div className="flex justify-between items-center mt-2">
-          <span className="text-sm text-gray-500">{product.price}</span>
-          <span className="text-sm font-semibold">{product.score}</span>
-        </div>
+      <div className="w-3/4 mb-3">
+        <NavLink to={`/Product/${product.id}`} activeClassName="active">
+          <img src={product.image} alt={product.name} className="w-full h-auto object-cover" />
+          <div className="pt-3">
+            <div className='flex items-center justify-between text-lg'>
+              <h3>{product.name}</h3>
+              <h3 className="font-semibold">{product.price}</h3>
+            </div>
+            <hr className="border-t border-gray-500" />
+            <div className="flex justify-between items-center mt-1 text-sm">
+              <span>score</span>
+              <span>{product.score}</span>
+            </div>
+          </div>
+        </NavLink>
       </div>
-    </div>
     );
   };  
   return (
-    <>
-      <Layout>
-      <div className="container mx-auto py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((product, index) => (
-          <ProductCard key={index} product={product} />
-        ))}
+    <Layout>
+      <div className="container items-center justify-center mx-auto py-8 mt-24">
+        <h1 className='text-4xl font-bold text-center mb-7'>PRODUCT LIST</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product, index) => (
+            <ProductCard key={index} product={product} />
+          ))}
+        </div>
       </div>
-    </div>
-      </Layout>
-    </>
+    </Layout>
   )
 }
 

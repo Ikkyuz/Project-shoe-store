@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from "../assets/Logo.png"
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -16,12 +17,12 @@ const Navbar = () => {
 
       {/* Linkpage */}
       <ul className='flex space-x-4 mr-20'>
-        <li><a href="" className='text-white text-xl mr-5 hover:text-red-600'>HOME</a></li>
-        <li><a href="" className='text-white text-xl mr-5 hover:text-red-600'>PRODUCT</a></li>
-        <li><a href="" className='text-white text-xl mr-5 hover:text-red-600'>BLOG</a></li>
-        <li><a href="" className='text-white text-xl mr-5 hover:text-red-600'>CONTACT</a></li>
-        <li><a href="" className='text-white hover:text-red-600'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></a></li>
-        <li><a href="" className='text-white hover:text-red-600'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></a></li>
+        <li><NavLink to="/" className='text-white text-xl mr-5 hover:text-red-600'>HOME</NavLink></li>
+        <li><NavLink to="/Product" className='text-white text-xl mr-5 hover:text-red-600'>PRODUCT</NavLink></li>
+        <li><NavLink to="/Blog" className='text-white text-xl mr-5 hover:text-red-600'>BLOG</NavLink></li>
+        <li><NavLink to="/Contact" className='text-white text-xl mr-5 hover:text-red-600'>CONTACT</NavLink></li>
+        {/* <li><a href="" className='text-white hover:text-red-600'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></a></li>
+        <li><a href="" className='text-white hover:text-red-600'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></a></li> */}
       </ul>
     </nav>
   )
