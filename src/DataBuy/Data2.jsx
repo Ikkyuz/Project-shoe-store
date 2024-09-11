@@ -12,7 +12,7 @@ const Data2 = () => {
 
         {/* รูปภาพสินค้า */}
         <div className="relative p-6 flex justify-center items-center w-full md:w-1/2">
-          <img src={productImage} alt="Product" />
+          <img src="/image/Product-2.jpg" alt="Product" />
         </div>
 
         {/* ข้อมูลสินค้า */}
@@ -20,7 +20,7 @@ const Data2 = () => {
 
           {/* หัวข้อสินค้า */}
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-2xl font-bold">ชื่อสินค้า</h2>
+            <h2 className="text-2xl font-bold">3 PF "MOTORSPORT</h2>
           </div>
           <p className="text-gray-500 text-sm">อะไรสักอย่างเพิ่มเติมของรองเท้า เช่น รองเท้าสำหรับผู้ชาย</p>
           <hr className='mt-4'/>

@@ -12,7 +12,7 @@ const Data9 = () => {
 
         {/* รูปภาพสินค้า */}
         <div className="relative p-6 flex justify-center items-center w-full md:w-1/2">
-          <img src={productImage} alt="Product" />
+          <img src="/image/Product-9.jpg" alt="Product" />
         </div>
 
         {/* ข้อมูลสินค้า */}
