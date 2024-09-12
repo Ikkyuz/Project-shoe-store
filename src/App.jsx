@@ -2,7 +2,7 @@ import React from 'react'
 import Home from './pages/Home'
 import Product from './pages/Product'
 import ProductDetail from './pages/ProductDetail';
-import Blog from './pages/Blog';
+import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
