@@ -4,9 +4,9 @@ import Product from './pages/Product'
 import ProductDetail from './pages/ProductDetail';
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
-import NotFound from './pages/NotFound';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (

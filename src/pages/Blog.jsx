@@ -1,25 +1,66 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from 'react';
+import Layout from '../components/Layout';
+import { NavLink } from 'react-router-dom'; // นำเข้า NavLink
 
-const Blog = () => {
+const products = [
+  {
+    id: 5, // กำหนด ID เป็น 5
+    name: 'WAVE VOLTAGE UNISEX',
+    description: 'คุณสมบัติ เทคโนโลยี Mizuno Wave ช่วยลดแรงกระแทกและความคล่องตัวแบบไดนามิก และการดูดซับแรงกระแทกอย่างหนักสำหรับการเคลื่อนไหวด้านข้างอย่างรวดเร็วที่เข้มข้นที่สุด ปฏิกิริยาตอบสนองอย่างรวดเร็วมีความสำคัญ และทำได้ง่ายด้วยการรองรับแรงกระแทกน้ำหนักเบา',
+    image: '/image/Product-5.jpg',
+  },
+  {
+    id: 7, // กำหนด ID เป็น 7
+    name: 'LIGHTNING Z8 UNISEX',
+    description: 'คุณสมบัติ ให้การรองรับแรงกระแทกที่นุ่มนวล และการส่งแรงกลับสูงที่คุณสัมผัสได้วัสดุกันกระแทกที่มีน้ำหนักเบา และต้องการกระโดดได้เร็วและสูงขึ้น แนะนำเป็นพิเศษสำหรับวิงสไปเกอร์ สำหรับผู้เล่นที่ต้องการฟังก์ชันเฉพาะสำหรับวอลเลย์บอล',
+    image: '/image/Product-7.jpg',
+  },
+  {
+    id: 4, // กำหนด ID เป็น 4
+    name: 'KD TREY 5 X EP',
+    description: 'คุณสิมบัติ มาพร้อมส่วนบนน้ำหนักเบาและการรองรับที่นุ่มพิเศษช่วยให้คุณลอยตัวเหมือนกับ KD ในขณะรอจังหวะที่เหมาะที่สุดเพื่อพุ่งตัวสู่ห่วงบาสเก็ตบอล',
+    image: '/image/Product-4.jpg',
+  },
+];
+
+const ProductCard = ({ product }) => {
+  return (
+    <div className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden max-w-3xl mx-auto mb-6">
+      {/* รูปภาพสินค้า */}
+      <div className="md:w-1/3">
+        <img src={product.image} alt={product.name} className="w-full h-auto md:h-full" />
+      </div>
+
+      {/* ข้อมูลสินค้า */}
+      <div className="p-6 md:w-2/3">
+        <h2 className="text-xl font-bold">{product.name}</h2>
+        <p className="text-gray-600 mt-2">{product.description}</p>
+
+        {/* ปุ่ม View Products ที่เชื่อมโยงไปยัง Product Detail Page */}
+        <NavLink to={`/product/${product.id}`}>
+          <button className="mt-4 bg-black text-white px-4 py-2 rounded hover:bg-gray-800">
+            View products
+          </button>
+        </NavLink>
+      </div>
+    </div>
+  );
+};
+
+const ProductsPage = () => {
   return (
     <Layout>
-        <section className='container mx-auto py-8 mt-24'>
-          <div className='items-center justify-center'>
-            <h1 className='text-4xl font-bold text-center mb-3'>POPULAR SPORTS SHOES</h1>
-            <div className="max-w-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://scontent-bkk1-2.xx.fbcdn.net/v/t39.30808-6/459427235_511838621438052_3311086788265819487_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGoBn9IYRBGOaNq-vVbNVO-3Yj97TiECy7diP3tOIQLLmotQ2GRgMifgo9VWCf7dqAQWlQWS5a0P8nGfI_XB9JX&_nc_ohc=bUpONMF2IPgQ7kNvgHKoKyq&_nc_ht=scontent-bkk1-2.xx&_nc_gid=Apg4sbfUn6FBVvqgT_gp7cG&oh=00_AYBlODQ932KtEJyK8l_vIdahnRmYGnB7Ne5baIB6EtU4WA&oe=66E9A455" alt=""/>
-                <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
+      {/* เพิ่มระยะห่างด้านบน */}
+      <div className="container mx-auto p-4 mt-24" >
+        <h1 className="text-3xl font-bold text-center mb-5">Popular Sports Shoes</h1>
+        <div className="grid">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default ProductsPage;

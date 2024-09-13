@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <Layout>
       <section className='container items-center justify-center mx-auto'>
-        <div className="mt-24 p-4 text-gray-800">
+        <div className="bg-white rounded shadow-md mt-24 p-4 text-gray-800">
             <h1 className="text-4xl font-bold text-deepPurple mb-6">Contact</h1>
             <p className="mb-4">ยินดีต้อนรับสู่หน้า Contact ของเว็บไซต์! เราให้ความสำคัญกับความคิดเห็นและคำถามของคุณ กรุณาใช้ข้อมูลด้านล่างนี้เพื่อติดต่อเรา หรือกรอกแบบฟอร์มติดต่อเพื่อส่งข้อความถึงทีมงานของเราโดยตรง</p>
             
@@ -32,9 +32,9 @@ const Contact = () => {
             </section>
 
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-semibold text-deepPurple mb-2">ฟอร์มติดต่อ</h2>
-                <form className="bg-white p-4 rounded shadow-md">
+            <section className="">
+                <h2 className="text-2xl font-semibold text-deepPurple">ฟอร์มติดต่อ</h2>
+                <form className="p-4">
                     <div className="mb-4">
                         <label className="block text-gray-700">ชื่อ</label>
                         <input type="text" className="w-full border border-gray-300 p-2 rounded" placeholder="กรอกชื่อของคุณ" />
