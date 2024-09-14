@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='bg-gray-950 flex justify-between items-center p-1 fixed w-full top-0 z-50'>
+    <nav className='bg-gray-950 flex justify-between items-center p-1 px-5 fixed w-full top-0 z-50'>
       <div className='items-center justify-center flex'>
         {/* Button to toggle the menu */}
         <button onClick={toggleMenu} className='text-white lg:hidden'>
@@ -49,14 +49,14 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Contact" className='flex text-white text-lg mr-5 hover:text-red-600'>
+              <NavLink to="/Contact" className='flex text-white text-lg mr-1 hover:text-red-600'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 2v2" /><path d="M7 22v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" /><path d="M8 2v2" /><circle cx="12" cy="11" r="3" /><rect x="3" y="4" width="18" height="18" rx="2" /></svg>
                 <span className='ml-2'>CONTACT</span>
               </NavLink>
             </li>
           </ul>
         </div>
-        <NavLink to="/Login" className='flex items-center text-white text-lg bg-red-600 px-2 rounded-xl hover:bg-red-800'>
+        <NavLink to="/Login" className='flex items-center text-white text-lg bg-red-600 px-2 h-auto rounded-xl hover:bg-red-800'>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-user"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="10" r="3" /><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /></svg>
           <span className='ml-2'>LOGIN</span>
         </NavLink>
