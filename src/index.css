@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Sarabun';
-    src: url(/src/font/Sarabun-Medium.ttf);
+    font-family: 'IBM';
+    src: url(/src/font/IBMPlexSansThai-Light.ttf);
 }
 body{
-    font-family: "Sarabun", sans-serif;
+    font-family: "IBM", sans-serif;
 }
