@@ -27,7 +27,7 @@ const Navbar = () => {
         </NavLink>
       </div>
       {/* Toggleable Menu */}
-      <div className='flex justify-end'>
+      <div className='flex justify-end h-auto'>
         <div className={`fixed  inset-y-0 left-0 w-64 p-4 z-50 transition-transform transform ${showMenu ? 'translate-x-0 left-0' : '-translate-x-full'} lg:w-auto lg:relative lg:translate-x-0 lg:flex lg:mt-0 lg:space-x-3 ${showMenu ? 'bg-gray-800' : 'md:bg-transparent'}`}>
           <ul className='flex flex-col lg:flex-row lg:space-x-4 items-center'>
             <li>
@@ -56,7 +56,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <NavLink to="/Login" className='flex items-center text-white text-lg bg-red-600 px-2 h-auto rounded-xl hover:bg-red-800'>
+        <NavLink to="/Login" className='flex items-center text-white text-lg bg-red-600 px-2 rounded-xl hover:bg-red-800 md:h-auto'>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-user"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="10" r="3" /><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" /></svg>
           <span className='ml-2'>LOGIN</span>
         </NavLink>

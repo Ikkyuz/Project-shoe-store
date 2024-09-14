@@ -6,7 +6,7 @@ import IIcon from '../assets/instagram.png'
 const Contact = () => {
   return (
     <Layout>
-      <section className='container items-center justify-center mx-auto'>
+      <section className='container items-center justify-center mx-auto p-4'>
         <div className="bg-white rounded shadow-md mt-24 p-4 text-gray-800">
             <h1 className="text-4xl font-bold text-deepPurple mb-6">Contact</h1>
             <p className="mb-4">ยินดีต้อนรับสู่หน้า Contact ของเว็บไซต์! เราให้ความสำคัญกับความคิดเห็นและคำถามของคุณ กรุณาใช้ข้อมูลด้านล่างนี้เพื่อติดต่อเรา หรือกรอกแบบฟอร์มติดต่อเพื่อส่งข้อความถึงทีมงานของเราโดยตรง</p>
