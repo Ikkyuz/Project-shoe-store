@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Roboto';
-    src: url(/src/font/Roboto-Medium.ttf);
+    font-family: 'Sarabun';
+    src: url(/src/font/Sarabun-Medium.ttf);
 }
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Sarabun", sans-serif;
 }
